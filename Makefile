@@ -13,5 +13,6 @@ manatee-read: $(OBJS)
 
 clean:
 	rm -f manatee-read
+	rm -f src/*.o
 
 .PHONY: all clean
