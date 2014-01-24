@@ -32,12 +32,19 @@ int main(int argc,char **argv) {
     return 1;
   }
   else if (i == MWB_RT_NOT_SUPPORTED) {
-    cout << "Unsupported decoder found in execution list" << endl;
+    cout << "Unsupported decoder found in execution list." << endl;
     return 2;
+  }
+  else if (i == MWB_RT_BAD_PARAM) {
+    cout << "Bad parameter (most likely image too big)." << endl;
+    return 3;
   }
   else {
     cout << "Bar code found,  " << i << " chars:" << endl;
     cout << (char*) decoded;
   }
+
+  free(decoded);
+
   return 0;
 }
