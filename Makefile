@@ -5,7 +5,7 @@ LDFLAGS += deps/manatee/libBarcodeScanner.a `GraphicsMagick++-config --ldflags -
 
 all: manatee-read
 
-src/%.o: src/%.cpp
+src/%.o: src/%.cc
 	g++ $(CFLAGS) -c $< -o $@
 
 manatee-read: $(OBJS)
