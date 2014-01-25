@@ -21,7 +21,7 @@ int main(int argc,char **argv) {
 
   cout << "Read image: " << height << " x " << width << " (" << raw.length() << " pixels)" << endl;
 
-  MWB_setActiveCodes(MWB_CODE_MASK_PDF);
+  MWB_setActiveCodes(MWB_CODE_MASK_ALL);
   MWB_setDirection(MWB_SCANDIRECTION_HORIZONTAL | MWB_SCANDIRECTION_VERTICAL);
   MWB_setLevel(5);
 
